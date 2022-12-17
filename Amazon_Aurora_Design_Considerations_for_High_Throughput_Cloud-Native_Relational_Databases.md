@@ -19,14 +19,16 @@ Database instances: traditional kernel
 - locking
 - buffer cache
 - access methods
-- undo management
+- **undo** **management**
 
-Storage service: off-load below operations to
+Storage service: offload below operations to storage fleet.
 
 - redo logging
 - durable storage
 - crash recovery
 - backup/restore
+- **materialization of data blocks**
+- **garbage collection**
 
 ![Amazon_Aurora_Design_Considerations_for_High_Throughput_Cloud-Native_Relational_Databases_1](images/Amazon_Aurora_Design_Considerations_for_High_Throughput_Cloud-Native_Relational_Databases_1.png)
 
@@ -59,6 +61,8 @@ Tolerate
 losing an entire AZ and one additional node (AZ+1) without losing data and read availability.
 
 losing an entire AZ without impacting the ability to write data.
+
+Supports “AZ+1” failures, resulting in 6 copies of data, spread across 3 AZs, a 4/6 write quorum, and a 3/6 read quorum. 
 
 ### 2.2 Segmented Storage
 
@@ -116,11 +120,11 @@ checkpoint + replay the log is normal.
 
 Steps: only steps (1) and (2) are in the foreground path.
 
-1. receive log record and add to an in-memory queue
+1. receive redolog record and add to an in-memory queue
 2. persist record on disk and acknowledge
-3. organize records and identify gaps in the log since some batches may be lost
+3. organize records and identify gaps in the log since some batches may be lost, sorts and groups records
 4. gossip with peers to fill in gaps
-5. coalesce log records into new data pages
+5. coalesce log records into new data pages (data blocks)
 6. periodically stage log and new pages to S3
 7. periodically garbage collect old versions
 8. periodically validate CRC codes on pages.
@@ -137,13 +141,15 @@ At a high level, we maintain points (LSN) of consistency and durability, and con
 
 Storage node gossips with the other members of their PG to fill LSN gap.
 
-SCL (Segment Complete LSN):  low watermark below which all the log records has been received. One storage node's LastLogIndex, this is from single node perspective, Aurora uses SCL to fill gaps across all 6 replicas. 表示最大的保证完整的LSN，即这个Segment在SCL之前是完整、没有空洞的。
+SCL (Segment Complete LSN):  low watermark below which all the log records has been received. One storage node's LastLogIndex, this is from single node perspective, Aurora uses SCL to fill gaps across all 6 replicas in PG. The inclusive upper bound on log records continuously linked through the segment chain without gaps. SCL is sent by the storage node as part of acknowledging a write. 表示最大的保证完整的LSN，即这个Segment在SCL之前是完整、没有空洞的。
 
-PGCL (Protection Group Complete LSN): 每个分片有各自的PGCL,database level's VCL is the largest PGCL.
+PGCL (Protection Group Complete LSN): the point at which the protection group has made all writes durable. 每个分片有各自的PGCL,database level's VCL is the largest PGCL.
 
 VCL (Volume Complete LSN): PG. During storage recovery, every log record with an LSN larger than the VCL must be truncated. CommitIndex, from storage nodes perspective as a unified view. storage node这一层多个节点已经同步，并且保证了一致性。
 
 CPL (Consistency Point LSN):
+
+SCN (System Commit Number):
 
 VDL (Volume Durable LSN): the highest CPL that is smaller than or equal to VCL. On recovery, the database talks to the storage service to establish the durable point of each PG and uses that to establish the VDL and then issue commands to truncate the log records above VDL.
 
@@ -224,7 +230,7 @@ A: In database node, not storage node.
 
 **Q: How sharding works in Aurora?**
 
-A: Table space are partitioned by 10G segment. 6 segments form a PG. PG and storage service are N:1. Data pages with Page No. are always routed to specific segment, alongside with redo log where each log record is associated with a page number. //TODO double confirm.
+A: Table space are partitioned by 10G segment. 6 segments form a PG. Data pages with Page No. are always routed to specific segment, alongside with redo log where each log record is associated with a page number.
 
 
 
