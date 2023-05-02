@@ -7,3 +7,5 @@
 [Spanner: Google’s Globally-Distributed Database](Spanner-Becoming_a_SQL_System.md)
 
 [Spanner: Becoming a SQL System](Spanner-Google_Globally-Distributed_Database.md)
+
+[“One Size Fits All”: An Idea Whose Time Has Come and Gone](One_Size_Fits_All_An_Idea_Whose_Time_Has_Come_and_Gone.md)
