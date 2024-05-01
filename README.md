@@ -10,4 +10,6 @@
 
 [Spanner: Becoming a SQL System](Spanner-Google_Globally-Distributed_Database.md)
 
+[Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics](Lakehouse_A_New_Generation_of_Open_Platforms_that_Unify_Data_Warehousing_and_Advanced_Analytics.md)
+
 [“One Size Fits All”: An Idea Whose Time Has Come and Gone](One_Size_Fits_All_An_Idea_Whose_Time_Has_Come_and_Gone.md)
