@@ -12,7 +12,8 @@
 
 [Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics](Lakehouse_A_New_Generation_of_Open_Platforms_that_Unify_Data_Warehousing_and_Advanced_Analytics.md)
 
-
 [Kudu: Storage for Fast Analytics on Fast Data](Kudu_Storage_for_Fast_Analytics_on_Fast_Data.md)
 
 [“One Size Fits All”: An Idea Whose Time Has Come and Gone](One_Size_Fits_All_An_Idea_Whose_Time_Has_Come_and_Gone.md)
+
+[What Every Programmer Should Know About Memory](What_Every_Programmer_Should_Know_About_Memory.md)
