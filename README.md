@@ -17,3 +17,5 @@
 [“One Size Fits All”: An Idea Whose Time Has Come and Gone](One_Size_Fits_All_An_Idea_Whose_Time_Has_Come_and_Gone.md)
 
 [What Every Programmer Should Know About Memory](What_Every_Programmer_Should_Know_About_Memory.md)
+
+[Dynamo: Amazon’s Highly Available Key-value Store](Dynamo_Amazon_Highly_Available_Key-value_Store.md)
