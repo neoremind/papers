@@ -2,6 +2,8 @@
 
 [Napa: Powering Scalable Data Warehousing with Robust Query Performance at Google](Napa_Powering_Scalable_Data_Warehousing_with_Robust_Query_Performance_at_Google.md)
 
+[Presto: SQL on Everything](Presto_SQL_on_Everything.md)
+
 [Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases](Amazon_Aurora_Design_Considerations_for_High_Throughput_Cloud-Native_Relational_Databases.md)
 
 [Amazon Aurora: On Avoiding Distributed Consensus for I/Os, Commits, and Membership Changes](Amazon_Aurora-On_Avoiding_Distributed_Consensus_for_IOs_Commits_and_Membership_Changes.md)
@@ -19,3 +21,5 @@
 [What Every Programmer Should Know About Memory](What_Every_Programmer_Should_Know_About_Memory.md)
 
 [Dynamo: Amazon’s Highly Available Key-value Store](Dynamo_Amazon_Highly_Available_Key-value_Store.md)
+
+[Amazon DynamoDB: A Scalable, Predictably Performant, and Fully Managed NoSQL Database Service](Amazon_DynamoDB_A_Scalable_Predictably_Performant_and_Fully_Managed_NoSQL_Database_Service.md)
