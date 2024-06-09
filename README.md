@@ -23,3 +23,5 @@
 [Dynamo: Amazon’s Highly Available Key-value Store](Dynamo_Amazon_Highly_Available_Key-value_Store.md)
 
 [Amazon DynamoDB: A Scalable, Predictably Performant, and Fully Managed NoSQL Database Service](Amazon_DynamoDB_A_Scalable_Predictably_Performant_and_Fully_Managed_NoSQL_Database_Service.md)
+
+[C-Store: A Column-oriented DBMS](C-Store_A_Column-oriented_DBMS.md)
