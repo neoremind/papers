@@ -4,6 +4,8 @@
 
 [Presto: SQL on Everything](Presto_SQL_on_Everything.md)
 
+[Presto: A Decade of SQL Analytics at Meta](Presto_A_Decade_of_SQL_Analytics_at_Meta.md)
+
 [Amazon Aurora: Design Considerations for High Throughput Cloud-Native Relational Databases](Amazon_Aurora_Design_Considerations_for_High_Throughput_Cloud-Native_Relational_Databases.md)
 
 [Amazon Aurora: On Avoiding Distributed Consensus for I/Os, Commits, and Membership Changes](Amazon_Aurora-On_Avoiding_Distributed_Consensus_for_IOs_Commits_and_Membership_Changes.md)
