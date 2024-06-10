@@ -88,6 +88,11 @@ SELECT COUNT() from table1 GROUP BY col1
 
 Recovery at shuffle point is too coarse, we need finer granularity. Presot runs on top of the Spark RDD interface to provide scalability and reliability.
 
+### Spilling
+
+interactive and ad-hoc work- loads spill data to local flash for latency, and ETL workload spill data to remote storage for scalability.
+
+
 ## 6. ENABLING RICHER ANALYTICS
 
 Data lake and Lake house trend support, Delta Lake, Iceberg, and Hudi. Presto integrates with all these table formats.
