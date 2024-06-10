@@ -124,7 +124,7 @@ Goal: do fair cooperative multi-tasking with arbitrary workloads. scheduler must
 
 Any given split is only allowed to run on a thread for a **maximum quanta** of one second, like CPU slicing for multi-queries run concurrently.
 
-Presto uses Memory Pools do shuffles, joins. Presto supports spilling for hash joins and aggregations, but in production no spill, so **no fault tolerance** which is unlike Hive and Spark.
+Presto does **in-memory processing**, uses Memory Pools do shuffles, joins. Presto supports spilling for hash joins and aggregations, but in production no spill, so **no fault tolerance** which is unlike Hive and Spark.
 
 ### 3.7 Fault Tolerance
 
@@ -152,14 +152,6 @@ Scan operators invoke Connector API with leaf split and get columnar data Pages.
 **Lazy materialization**.
 
 
-
-
-
-
-
-
-
-
 ## FAQ
 
 ### What’s the difference between PrestoDB and PrestoSQL?
@@ -175,4 +167,8 @@ Scan operators invoke Connector API with leaf split and get columnar data Pages.
 PrestoDB is the former name of the original version of Presto. It was developed by Eric Hwang, Dain Sundstrom, David Phillips, and Martin Traverso at Facebook. In 2018, they left Facebook and founded the Presto Software Foundation to ensure that the project would remain collaborative and independent. They named their new fork PrestoSQL, which was later renamed to Trino at the end of 2020. PrestoDB was renamed to Presto shortly after, so PrestoDB is now simply called Presto, and PrestoSQL is now Trino.
 
 see https://trino.io/blog/2020/12/27/announcing-trino.html
+
+### Raptor
+
+https://prestodb.io/blog/2021/02/04/raptorx/
 
