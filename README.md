@@ -27,3 +27,7 @@
 [Amazon DynamoDB: A Scalable, Predictably Performant, and Fully Managed NoSQL Database Service](Amazon_DynamoDB_A_Scalable_Predictably_Performant_and_Fully_Managed_NoSQL_Database_Service.md)
 
 [C-Store: A Column-oriented DBMS](C-Store_A_Column-oriented_DBMS.md)
+
+[MonetDB/X100: Hyper-Pipelining Query Execution](MonetDB_X100_Hyper-Pipelining_Query_Execution.md)
+
+[MonetDB: Two Decades of Research in Column-oriented Database Architectures](MonetDB_Two_Decades_of_Research_in_Column-oriented_Database_Architectures.md)
