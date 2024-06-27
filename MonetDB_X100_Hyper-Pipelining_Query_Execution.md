@@ -84,7 +84,7 @@ Data Storage
 
 * To handle updates, deletion list + delta columns.
 * Lightweight compression, encoding, store a column as a single-byte or two-byte integer.
-* “summary” indices, min, max of a block.
+* “summary” indices, MinMax indices on all columns.
 
 ## Appendix 1. How CPUs Work
 

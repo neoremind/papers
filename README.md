@@ -31,3 +31,7 @@
 [MonetDB/X100: Hyper-Pipelining Query Execution](MonetDB_X100_Hyper-Pipelining_Query_Execution.md)
 
 [MonetDB: Two Decades of Research in Column-oriented Database Architectures](MonetDB_Two_Decades_of_Research_in_Column-oriented_Database_Architectures.md)
+
+[Vectorwise: Beyond Column Stores](Vectorwise_Beyond_Column_Stores.md)
+
+[Vectorwise: a Vectorized Analytical DBMS](Vectorwise_a_Vectorized_Analytical_DBMS.md)
