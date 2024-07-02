@@ -35,3 +35,5 @@
 [Vectorwise: Beyond Column Stores](Vectorwise_Beyond_Column_Stores.md)
 
 [Vectorwise: a Vectorized Analytical DBMS](Vectorwise_a_Vectorized_Analytical_DBMS.md)
+
+[The Snowflake Elastic Data Warehouse](The_Snowflake_Elastic_Data_Warehouse.md)

@@ -39,6 +39,8 @@ Another one is that there is a long road from research prototype to commercial p
 
 - **MinMax indices**: small materialized aggregates, simple metadata in block level, quick elimination of ranges of records during scan operations
 
+*Small materialized aggregates: A light weight index structure for data warehousing. In Proc. VLDB, 1998.*
+
 - **High-performance updates**: Positional Delta Trees (PDT) and data loading.
 
 ## Query Execution
