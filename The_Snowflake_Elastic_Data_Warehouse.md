@@ -14,7 +14,7 @@ In this paper, we describe the design of Snowflake and its novel multi-cluster, 
 
 ### 1.1 Why we design a new DW?
 
-Snowflake was founded in 2012.
+Snowflake was founded in 2012, runs completely on cloud infrastructure for demanding data needs. 
 
 **Reason 1: Cloud env**. Traditional data warehousing were designed to run on static clusters, making them a poor architectural fit to cloud (AWS, Azure, GCP). The diff is 
 - economies of scale *(xu: for cloud provider)*
@@ -55,6 +55,10 @@ Snowflake is a SOA composed of highly fault tolerant and independently scalable 
 
 3 Layers: `Data Storage` + `Virtual Warehouses` + `Cloud Services`
 
+![](images/The_Snowflake_Elastic_Data_Warehouse/1.webp)
+
+*source: https://docs.snowflake.com/en/user-guide/intro-key-concepts*
+
 ### 3.1 Data Storage
 
 Why AWS S3 as blob store not build from scratch? 
@@ -68,6 +72,8 @@ Why AWS S3 as blob store not build from scratch?
 So Snowflake focuses on local caching (warm) and skew resilience techniques in the Virtual Warehouses layer, not blob store. 
 
 How does it work?
+
+- Central persistant data stroage on cloud.
 
 - Tables are horizontally partitioned into immutable files (=blocks or pages in a traditional DW). 
 
@@ -83,9 +89,24 @@ How does it work?
 
 ### 3.2 Virtual Warehouses
 
+MPP (massively parallel processing) 
+
+**T-Shirt sizes of VM**
+
+| Size     | Description | Number of Servers per Cluster |
+| -------- | -------  | -------  |
+| XS  | Extra small    | 1 |
+| S  | Small    | 2 |
+| M  | Medium    | 4 |
+| L  | Large    | 8 |
+| XL  | Extra large    | 16 |
+| 2XL  | Extra extra large    | 21 |
+| 3XL  | Three times extra large    | 64 |
+| 4XL  | Four times extra large    | 128 |
+
 - **Elasticity and Isolation** *(Xu: Biggest differentiator at that time from other DW offerings!)*
 
-compute resources = worker nodes = EC2 = ephemeral nodes, can created, destroyed, or **resized** at any point dynamically, elastic, on demand.  
+virtual compute instances = compute resources = worker nodes = EC2 = ephemeral nodes, can created, destroyed, or **resized** at any point dynamically, elastic, on demand.  
 
 Multiple VWs for a user. Performance isolation for queries between VMs for diff workloads. 
 
@@ -106,22 +127,10 @@ LRU cache. Live for the duration of the worker node, shared among concurrent and
 *41. T. Neumann. Efficiently compiling efficient query plans for
 modern hardware. PVLDB, 4(9):539–550, 2011.*
 
-**T-Shirt sizes of VM**
-
-| Size     | Description | Number of Servers per Cluster |
-| -------- | -------  | -------  |
-| XS  | Extra small    | 1 |
-| S  | Small    | 2 |
-| M  | Medium    | 4 |
-| L  | Large    | 8 |
-| XL  | Extra large    | 16 |
-| 2XL  | Extra extra large    | 21 |
-| 3XL  | Three times extra large    | 64 |
-| 4XL  | Four times extra large    | 128 |
 
 ### 3.3 Cloud Services
 
-Highly for multi-tenant - access control, query optimizer, improves transaction manager, utilization and reduces operational overhead.
+Highly for multi-tenant - access control, infrastructure management, query parsing and optimization, transaction manager, improves utilization and reduces operational overhead.
 
 - **Query optimizer Cascades**- style approach with top-down cost-based optimization.
 
@@ -146,8 +155,6 @@ SELECT * FROM my_table AT(OFFSET => -60*5); -- 5 min ago
 SELECT * FROM my_table BEFORE(STATEMENT =>
   ’8e5d0ca9-005e-44e6-b858-a8f5b37c5726’);
 ```
-table file format, concurrency control scheme
-
 
 ## FAQ
 
