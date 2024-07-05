@@ -39,3 +39,6 @@
 [The Snowflake Elastic Data Warehouse](The_Snowflake_Elastic_Data_Warehouse.md)
 
 [Building An Elastic Query Engine on Disaggregated Storage](Building_An_Elastic_Query_Engine_on_Disaggregated_Storage.md)
+
+[Mesa: Geo-Replicated, Near Real-Time, Scalable Data
+Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
