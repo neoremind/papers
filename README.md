@@ -47,4 +47,6 @@ Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
 
 [Dremel: A Decade of Interactive SQL Analysis at Web Scale](Dremel_A_Decade_of_Interactive_SQL_Analysis.md)
 
-[Inside Capacitor, BigQuery’s next-generation columnar storage format]()Inside_Capacitor_BigQuery_next-generation_columnar_storage_format.md
+[Inside Capacitor, BigQuery’s next-generation columnar storage format](Inside_Capacitor_BigQuery_next-generation_columnar_storage_format.md)
+
+[Integrating Compression and Execution in Column-Oriented Database Systems](Integrating_Compression_and_Execution_in_Column_Oriented_Database_Systems.md)
