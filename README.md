@@ -50,3 +50,6 @@ Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
 [Inside Capacitor, BigQuery’s next-generation columnar storage format](Inside_Capacitor_BigQuery_next-generation_columnar_storage_format.md)
 
 [Integrating Compression and Execution in Column-Oriented Database Systems](Integrating_Compression_and_Execution_in_Column_Oriented_Database_Systems.md)
+
+
+[Hive - A Warehousing Solution Over a Map-Reduce Framework](Hive_A_Warehousing_Solution_Over_a_Map-Reduce_Framework.md)
