@@ -51,5 +51,6 @@ Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
 
 [Integrating Compression and Execution in Column-Oriented Database Systems](Integrating_Compression_and_Execution_in_Column_Oriented_Database_Systems.md)
 
-
 [Hive - A Warehousing Solution Over a Map-Reduce Framework](Hive_A_Warehousing_Solution_Over_a_Map-Reduce_Framework.md)
+
+[Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing](Resilient_Distributed_Datasets_A_Fault-Tolerant_Abstraction_for_In-Memory_Cluster_Computing.md)
