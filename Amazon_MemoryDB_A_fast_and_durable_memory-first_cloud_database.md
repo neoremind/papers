@@ -92,6 +92,18 @@ Rrite-only (Figure 5b) workloads, Redis delivers sub-millisecond median latencie
 
 ![](images/Amazon_MemoryDB_A_fast_and_durable_memory-first_cloud_database/memorydb3.png)
 
+## Appendix
+
+### What is valkey?
+
+https://github.com/valkey-io/valkey
+
+Less than a week after Redis Inc. announced it was [removing the open source license](https://redis.io/blog/redis-adopts-dual-source-available-licensing/) and pulling out of the Redis project, Redis contributors banded together to move the community to The Linux Foundation as the Valkey project. They did this almost immediately after the license change announcement went live, in response to community outcry on GitHub and on social media, asking to fork the project or join an existing fork. More here.
+ 
+### How is memoryDB different than Redis?
+
+Open source Redis allows writes and strongly consistent reads on the primary node of each shard and eventually consistent reads from read replicas. These consistency properties are not guaranteed if a primary node fails, as writes can become lost during a failover and thus violate the consistency model.The consistency model of MemoryDB is similar to open source Redis. However, in MemoryDB, data is not lost across failovers, allowing clients to read their writes from primaries regardless of node failures. Only data that is successfully persisted in the multi-AZ transaction log is visible. Replica nodes are still eventually consistent, with lag metrics published to Amazon CloudWatch.
+ 
 
 
 
