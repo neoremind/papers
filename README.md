@@ -60,3 +60,5 @@ Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
 [Amazon Redshift and the Case for Simpler Data Warehouses](Amazon_Redshift_and_the_Case_for_Simpler_Data_Warehouses.md)
 
 [Amazon Redshift Re-invented](Amazon_Redshift_Re-invented.md)
+
+[Self-Driving Database Management Systems](Self-Driving_Database_Management_Systems.md)
