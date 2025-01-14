@@ -56,3 +56,7 @@ Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
 [Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing](Resilient_Distributed_Datasets_A_Fault-Tolerant_Abstraction_for_In-Memory_Cluster_Computing.md)
 
 [Amazon MemoryDB: A fast and durable memory-first cloud database](Amazon_MemoryDB_A_fast_and_durable_memory-first_cloud_database.md)
+
+[Amazon Redshift and the Case for Simpler Data Warehouses](Amazon_Redshift_and_the_Case_for_Simpler_Data_Warehouses.md)
+
+[Amazon Redshift Re-invented](Amazon_Redshift_Re-invented.md)
