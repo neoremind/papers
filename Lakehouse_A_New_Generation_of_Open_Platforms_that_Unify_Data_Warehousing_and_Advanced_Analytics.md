@@ -70,3 +70,33 @@ Existing steps towards Lakehouses:
     - data layout optimizations.
       - record ordering.  zonemap. individual dimensions or space-filling curves such as Z-order and Hilbert curves to provide locality across multiple dimensions.  minimize IO volume.
 
+## APPENDIX
+
+- Why Lakehouse?
+
+  1. Simplified architecture and no data duplication with complex ETL pipelines (avoiding quality and inconsistency).
+  2. TCO down because store raw data in cheap and scalable blob object store (S3).
+  3. Fresher data staleness vs. staging data, periodic ETL jobs.
+  4. Better real-time streaming and ML & AI support (structured & semi-structured Data)
+
+- Why not data lake?
+
+  Compared data lake, lakehouse provides 
+  
+  - ACID transactions compliant
+  - stricter schema and structure enforcement (less quality)
+  - Fast optimized performance better cost efficiency
+
+| Feature               | Data Warehouse        | Data Lake                | Lakehouse               |
+|-----------------------|----------------------|--------------------------|-------------------------|
+| **Storage Cost**      | Expensive            | Cheap (Object Storage)   | Moderate               |
+| **Data Structure**    | Structured           | Unstructured & Raw       | Structured & Semi-Structured |
+| **Schema Enforcement** | Strict Schema        | No Schema Enforcement    | Flexible Schema         |
+| **Query Performance** | Fast (Optimized for SQL) | Slow (Without Indexing) | Fast (Indexes, Caching) |
+| **ACID Transactions** | ✅ Yes               | ❌ No                    | ✅ Yes                  |
+| **Real-Time Data**    | ❌ Limited           | ✅ Yes                   | ✅ Yes                  |
+| **Machine Learning Support** | ❌ Limited | ✅ Yes (Unstructured Data) | ✅ Yes (ML & AI Friendly) |
+| **Streaming Support** | ❌ Limited           | ✅ Yes                   | ✅ Yes                  |
+| **Compute & Storage** | Tightly Coupled      | Decoupled (Scalable)     | Decoupled (Scalable)    |
+| **Best For**          | BI & Analytics       | Raw Data Storage & ML    | Unified Analytics & AI  |
+
