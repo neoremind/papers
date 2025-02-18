@@ -64,3 +64,5 @@ Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
 [Amazon Redshift Re-invented](Amazon_Redshift_Re-invented.md)
 
 [Self-Driving Database Management Systems](Self-Driving_Database_Management_Systems.md)
+
+[Attention Is All You Need](Attention_Is_All_You_Need.md)
