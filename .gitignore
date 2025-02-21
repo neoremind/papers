@@ -7,3 +7,4 @@
 /gradlew.bat
 /wrapper/
 *.iml
+.DS_Store
