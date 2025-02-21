@@ -66,3 +66,5 @@ Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
 [Self-Driving Database Management Systems](Self-Driving_Database_Management_Systems.md)
 
 [Attention Is All You Need](Attention_Is_All_You_Need.md)
+
+[AnalyticDB: Real-time OLAP Database System at Alibaba Cloud](AnalyticDB_Real-time_OLAP_Database_System_at_Alibaba_Cloud.md)
