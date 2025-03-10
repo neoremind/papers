@@ -132,3 +132,9 @@ https://kafka.apache.org/documentation/#design
 - Message Queues
     - RabbitMQ
     - Amazon SQS
+
+### My practices
+
+https://neoremind.com/2018/03/%e6%b6%88%e6%81%af%e9%98%9f%e5%88%97%e6%8a%80%e6%9c%af%e7%82%b9%e6%a2%b3%e7%90%86/
+
+https://github.com/neoremind/kafka-example

@@ -68,3 +68,6 @@ Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
 [Attention Is All You Need](Attention_Is_All_You_Need.md)
 
 [AnalyticDB: Real-time OLAP Database System at Alibaba Cloud](AnalyticDB_Real-time_OLAP_Database_System_at_Alibaba_Cloud.md)
+
+[Kafka: a Distributed Messaging System for Log Processing](Kafka_a_Distributed_Messaging_System_for_Log_Processing.md)
+
