@@ -21,7 +21,9 @@ Kafka, a distributed messaging system, complementary of traditional real-time lo
 
 - Topic: A stream of messages of a particular type.
 - Partition: A topic is divided into
-multiple partitions.
+multiple partitions. Ordered, immutable sequence
+of records that is continually appended to a structured commit
+log. 
 - Broker: Stateless, each broker stores one or more 
 partitions.
 - Producer
