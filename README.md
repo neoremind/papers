@@ -74,3 +74,5 @@ Warehousing](Mesa_Geo-Replicated_Near_Real-Time_Scalable_Data_Warehousing.md)
 [Kafka: a Distributed Messaging System for Log Processing](Kafka_a_Distributed_Messaging_System_for_Log_Processing.md)
 
 [KSQL: Streaming SQL Engine for Apache Kafka](KSQL_Streaming_SQL_Engine_for_Apache_Kafka.md)
+
+[LMAX Disruptor: High performance alternative to bounded queues for exchanging data between concurrent threads](LMAX_Disruptor_High_performance_alternative_to_bounded_queues_for_exchanging_data_between_concurrent_threads.md)
